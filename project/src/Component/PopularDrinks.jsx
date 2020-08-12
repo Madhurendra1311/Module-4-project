@@ -8,7 +8,7 @@ const ContWrapper = styled.div`
   img {
     width: 200px;
     margin: 10px;
-    border: 4px solid black;
+    border: 4px solid white;
   }
   h3 {
     flex: 1px;

@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { Component } from "react";
-
+import { AppContext } from "../Context/AppContextProvider";
 const NavBarWrapper = styled.div`
   width: 98%;
 
   height: 70px;
-  border: 1px solid black;
+  border: 1px solid white;
   padding: 10px;
   background-color: #282c34;
   img {
@@ -29,19 +29,23 @@ class NavBar extends Component {
   constructor(props) {
     super(props);
   }
+  handleToggle = () => {
+    const { isAuth, toggleAuth } = this.context;
+    toggleAuth(false);
+  };
   render() {
     return (
       <>
         <NavBarWrapper>
-          {" "}
           <img
             src="https://www.thecocktaildb.com/images/logo.png"
             alt="logo.png"
           ></img>
-          <button>Home</button>
+          <button onClick={this.handleToggle}>Home</button>
         </NavBarWrapper>
       </>
     );
   }
 }
+NavBar.contextType = AppContext;
 export default NavBar;
