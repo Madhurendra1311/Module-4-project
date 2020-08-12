@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { Component } from "react";
 
 const NavBarWrapper = styled.div`
-  width: 100%;
+  width: 98%;
+
   height: 70px;
   border: 1px solid black;
   padding: 10px;
