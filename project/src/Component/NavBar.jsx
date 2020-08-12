@@ -6,7 +6,7 @@ const NavBarWrapper = styled.div`
   width: 98%;
 
   height: 70px;
-  border: 1px solid white;
+  border: 1px solid;
   padding: 10px;
   background-color: #282c34;
   img {
@@ -22,7 +22,7 @@ const NavBarWrapper = styled.div`
     color: white;
     font-size: 20px;
     margin-top: -40px;
-    background-color: teal;
+    background-color: #ff8c00;
   }
 `;
 class NavBar extends Component {

@@ -1,9 +1,10 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React from "react";
 import { AppContext } from "../Context/AppContextProvider";
+import { Component } from "react";
+import styled from "styled-components";
 const Cont = styled.div`
-  display: flex;
   width: 80%;
+  background-color: #330033;
   margin: 10%;
   img {
     width: 100px;
@@ -12,32 +13,27 @@ const Cont = styled.div`
   }
 `;
 const Card = styled.div`
-  display: flex;
-  margin-left: 37%;
   margin-top: -60px;
+
   img {
     width: 300px;
     border: 5px solid white;
-    flex: 1px;
   }
 `;
-class Result extends Component {
+class Letter extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      data: "",
-    };
   }
-
   render() {
-    console.log(this.context.data ? this.context.data[0].idDrink : null);
+    console.log(this.context.letterdata);
+    const { letterdata } = this.context;
     return (
       <>
         <Cont>
           <Card>
-            {this.props.data ? (
+            {letterdata ? (
               <h4>
-                {this.props.data.map((item) => (
+                {letterdata.map((item) => (
                   <div>
                     <img src={item.strDrinkThumb}></img>
                     <h4>{item.strDrink}</h4>
@@ -52,5 +48,5 @@ class Result extends Component {
     );
   }
 }
-Result.contextType = AppContext;
-export default Result;
+Letter.contextType = AppContext;
+export default Letter;

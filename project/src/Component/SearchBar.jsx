@@ -5,12 +5,15 @@ import { AppContext } from "../Context/AppContextProvider";
 
 const Cont = styled.div`
   padding: 10px;
+  margin-top: 40px;
   input {
     padding: 10px;
+    color: black;
   }
   button {
     padding: 10px;
     margin-left: 10px;
+    color: black;
   }
 `;
 class SearchBar extends Component {
