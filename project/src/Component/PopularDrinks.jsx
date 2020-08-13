@@ -34,12 +34,13 @@ class PopularDrinks extends Component {
   setToken = (res) => {
     const {
       status,
-      updateStatus,
-      updateLetter,
-      updateInte,
-      intdata,
       toggleAuth,
-      isAuth,
+      updateData,
+
+      updateInte,
+      updatepopInte,
+      updateranInte,
+      updateLetter,
     } = this.context;
 
     this.setState({
@@ -47,6 +48,10 @@ class PopularDrinks extends Component {
     });
     toggleAuth(true);
     updateInte(this.state.drinkDesc);
+    updateData("");
+    updateLetter("");
+    updatepopInte("");
+    updateranInte("");
   };
   render() {
     console.log(this.state.drinkDesc);

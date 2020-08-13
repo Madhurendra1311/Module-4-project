@@ -58,13 +58,25 @@ class BrowseDrinks extends Component {
     axios.get(searchEndpints).then((res) => this.setToken(res));
   };
   setToken = (res) => {
-    const { status, updateStatus, updateLetter, toggleAuth } = this.context;
+    const {
+      status,
+      toggleAuth,
+      updateData,
+
+      updateInte,
+      updatepopInte,
+      updateranInte,
+      updateLetter,
+    } = this.context;
 
     this.setState({
       userDetails: res.data.drinks,
     });
     toggleAuth(true);
-
+    updateranInte("");
+    updatepopInte("");
+    updateData("");
+    updateInte("");
     updateLetter(this.state.userDetails);
   };
   render() {

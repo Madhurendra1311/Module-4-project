@@ -1,6 +1,8 @@
 import React from "react";
+import axios from "axios";
 import styled from "styled-components";
 import { Component } from "react";
+import { AppContext } from "../Context/AppContextProvider";
 const ContWrapper = styled.div`
   display: flex;
   width: 84%;
@@ -18,32 +20,97 @@ const ContWrapper = styled.div`
 class LatestDrinks extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      drinkLatest: [],
+    };
   }
+  handleLatest = (name) => {
+    let showLatest =
+      "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + name;
+    console.log(showLatest);
+    axios.get(showLatest).then((res) => this.setToken(res));
+  };
+
+  setToken = (res) => {
+    const {
+      status,
+      toggleAuth,
+      updateData,
+
+      updateInte,
+      updatepopInte,
+      updateranInte,
+      updateLetter,
+    } = this.context;
+
+    this.setState({
+      drinkLatest: res.data.drinks,
+    });
+    toggleAuth(true);
+    updateranInte(this.state.drinkLatest);
+    updateData("");
+    updatepopInte("");
+
+    updateLetter("");
+    updateInte("");
+  };
+
   render() {
+    console.log(this.state.drinkLatest);
     return (
       <>
         <h4>Latest Drinks</h4>
         <ContWrapper>
-          <img
-            src="https://www.thecocktaildb.com/images/media/drink/ojnpz71504793059.jpg"
-            alt="The Evil Blue Thing"
-          ></img>
-          <img
-            src="https://www.thecocktaildb.com/images/media/drink/wquwxs1441247025.jpg"
-            alt="Thai Coffee"
-          ></img>
-          <img
-            src="https://www.thecocktaildb.com/images/media/drink/vdp2do1487603520.jpg"
-            alt="Mango Orange Smoothie"
-          ></img>
-          <img
-            src="https://www.thecocktaildb.com/images/media/drink/uxxtrt1472667197.jpg"
-            alt="Absinthe #2"
-          ></img>
-          <img
-            src="https://www.thecocktaildb.com/images/media/drink/vpqspv1478963339.jpg"
-            alt="Queen Elizabeth"
-          ></img>
+          <div
+            onClick={() => {
+              this.handleLatest("The Evil Blue Thing");
+            }}
+          >
+            <img
+              src="https://www.thecocktaildb.com/images/media/drink/ojnpz71504793059.jpg"
+              alt="The Evil Blue Thing"
+            ></img>
+          </div>
+          <div
+            onClick={() => {
+              this.handleLatest("Thai Coffee");
+            }}
+          >
+            <img
+              src="https://www.thecocktaildb.com/images/media/drink/wquwxs1441247025.jpg"
+              alt="Thai Coffee"
+            ></img>
+          </div>
+          <div
+            onClick={() => {
+              this.handleLatest("Mango Orange Smoothie");
+            }}
+          >
+            <img
+              src="https://www.thecocktaildb.com/images/media/drink/vdp2do1487603520.jpg"
+              alt="Mango Orange Smoothie"
+            ></img>
+          </div>
+          <div
+            onClick={() => {
+              this.handleLatest("Absinthe #2");
+            }}
+          >
+            <img
+              src="https://www.thecocktaildb.com/images/media/drink/uxxtrt1472667197.jpg"
+              alt="Absinthe #2"
+            ></img>
+          </div>
+          <div
+            onClick={() => {
+              this.handleLatest("Absinthe #2");
+            }}
+          >
+            <img
+              src="https://www.thecocktaildb.com/images/media/drink/vpqspv1478963339.jpg"
+              alt="Queen Elizabeth"
+            ></img>
+          </div>
         </ContWrapper>
         <ContWrapper>
           <h3>Bounty Hunter</h3>
@@ -53,26 +120,56 @@ class LatestDrinks extends Component {
           <h3>Queen Elizabeth</h3>
         </ContWrapper>
         <ContWrapper>
-          <img
-            src="https://www.thecocktaildb.com/images/media/drink/f9erqb1504350557.jpg"
-            alt="Mary Pickford"
-          ></img>
-          <img
-            src="https://www.thecocktaildb.com/images/media/drink/voapgc1492976416.jpg"
-            alt="Victor"
-          ></img>
-          <img
-            src="https://www.thecocktaildb.com/images/media/drink/vsrsqu1472761749.jpg"
-            alt="Grand Blue"
-          ></img>
-          <img
-            src="https://www.thecocktaildb.com/images/media/drink/apictz1493069760.jpg"
-            alt="Amaretto Sunset"
-          ></img>
-          <img
-            src="https://www.thecocktaildb.com/images/media/drink/svsxsv1454511666.jpg"
-            alt="Caribbean Boilermaker"
-          ></img>
+          <div
+            onClick={() => {
+              this.handleLatest("Mary Pickford");
+            }}
+          >
+            <img
+              src="https://www.thecocktaildb.com/images/media/drink/f9erqb1504350557.jpg"
+              alt="Mary Pickford"
+            ></img>
+          </div>
+          <div
+            onClick={() => {
+              this.handleLatest("Victor");
+            }}
+          >
+            <img
+              src="https://www.thecocktaildb.com/images/media/drink/voapgc1492976416.jpg"
+              alt="Victor"
+            ></img>
+          </div>
+          <div
+            onClick={() => {
+              this.handleLatest("Grand Blue");
+            }}
+          >
+            <img
+              src="https://www.thecocktaildb.com/images/media/drink/vsrsqu1472761749.jpg"
+              alt="Grand Blue"
+            ></img>
+          </div>
+          <div
+            onClick={() => {
+              this.handleLatest("Amaretto Sunset");
+            }}
+          >
+            <img
+              src="https://www.thecocktaildb.com/images/media/drink/apictz1493069760.jpg"
+              alt="Amaretto Sunset"
+            ></img>
+          </div>
+          <div
+            onClick={() => {
+              this.handleLatest("Caribbean Boilermaker");
+            }}
+          >
+            <img
+              src="https://www.thecocktaildb.com/images/media/drink/svsxsv1454511666.jpg"
+              alt="Caribbean Boilermaker"
+            ></img>
+          </div>
         </ContWrapper>
         <ContWrapper>
           <h3>Mary Pickford</h3>
@@ -85,4 +182,5 @@ class LatestDrinks extends Component {
     );
   }
 }
+LatestDrinks.contextType = AppContext;
 export default LatestDrinks;

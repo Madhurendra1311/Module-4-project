@@ -44,13 +44,27 @@ class SearchBar extends Component {
   };
 
   setToken = (res) => {
-    const { isAuth, toggleAuth, data, updateData } = this.context;
+    const {
+      isAuth,
+      toggleAuth,
+      data,
+      updateData,
+      updateStatus,
+      updateInte,
+      updatepopInte,
+      updateranInte,
+      updateLetter,
+    } = this.context;
     toggleAuth(true);
     this.setState({
       data: res.drinks,
     });
     console.log(this.state.data);
     updateData(this.state.data);
+    updateInte("");
+    updateLetter("");
+    updatepopInte("");
+    updateranInte("");
   };
   render() {
     return (

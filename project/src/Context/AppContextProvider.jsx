@@ -10,6 +10,8 @@ class AppContextProvider extends React.Component {
       data: "",
       letterdata: "",
       intdata: "",
+      popInte: "",
+      ranInte: "",
     };
   }
   toggleAuth = (res) => {
@@ -33,20 +35,40 @@ class AppContextProvider extends React.Component {
       intdata: data,
     });
   };
+  updatepopInte = (data) => {
+    this.setState({
+      popInte: data,
+    });
+  };
+  updateranInte = (data) => {
+    this.setState({
+      ranInte: data,
+    });
+  };
   updateLetter = (data) => {
     this.setState({
       letterdata: data,
     });
   };
   render() {
-    console.log(this.state.intdata);
-    const { status, isAuth, data, letterdata, intdata } = this.state;
+    console.log(this.state.ranInte);
+    const {
+      status,
+      isAuth,
+      data,
+      letterdata,
+      intdata,
+      popInte,
+      ranInte,
+    } = this.state;
     const {
       toggleAuth,
       updateData,
       updateStatus,
-      updateLetter,
       updateInte,
+      updatepopInte,
+      updateranInte,
+      updateLetter,
     } = this;
     return (
       <AppContext.Provider
@@ -61,6 +83,10 @@ class AppContextProvider extends React.Component {
           updateLetter,
           intdata,
           updateInte,
+          popInte,
+          ranInte,
+          updatepopInte,
+          updateranInte,
         }}
       >
         {this.props.children}

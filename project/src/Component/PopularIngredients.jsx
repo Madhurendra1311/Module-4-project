@@ -10,8 +10,11 @@ const ContWrapper = styled.div`
     margin: 10px;
   }
   h3 {
-    flex: 1px;
     margin-top: 0px;
+  }
+  div {
+    padding: 10px;
+    text-content: center;
   }
 `;
 class PopularIngredients extends Component {
@@ -23,33 +26,42 @@ class PopularIngredients extends Component {
       <>
         <h4>Popular Ingredients</h4>
         <ContWrapper>
-          <img
-            src="https://www.thecocktaildb.com/images/ingredients/Vodka.png"
-            alt="Vodka.png"
-          ></img>
-          <img
-            src="https://www.thecocktaildb.com/images/ingredients/Gin.png"
-            alt="Gin"
-          ></img>
-          <img
-            src="https://www.thecocktaildb.com/images/ingredients/Rum.png"
-            alt="Rum"
-          ></img>
-          <img
-            src="https://www.thecocktaildb.com/images/ingredients/Tequila.png"
-            alt="Tequila"
-          ></img>
-          <img
-            src="https://www.thecocktaildb.com/images/ingredients/Scotch.png"
-            alt="Scotch"
-          ></img>
-        </ContWrapper>
-        <ContWrapper>
-          <h3>Vodka</h3>
-          <h3>Gin</h3>
-          <h3>Rum</h3>
-          <h3>Tequila</h3>
-          <h3>Scotch</h3>
+          <div>
+            <img
+              src="https://www.thecocktaildb.com/images/ingredients/Vodka.png"
+              alt="Vodka.png"
+            ></img>
+            <h3>Vodka</h3>
+          </div>
+          <div>
+            <img
+              src="https://www.thecocktaildb.com/images/ingredients/Gin.png"
+              alt="Gin"
+            ></img>
+            <h3>Gin</h3>
+          </div>
+          <div>
+            <img
+              src="https://www.thecocktaildb.com/images/ingredients/Rum.png"
+              alt="Rum"
+            ></img>
+
+            <h3 style={{ marginLeft: "0px" }}>Rum</h3>
+          </div>
+          <div>
+            <img
+              src="https://www.thecocktaildb.com/images/ingredients/Tequila.png"
+              alt="Tequila"
+            ></img>
+            <h3>Tequila</h3>
+          </div>
+          <div>
+            <img
+              src="https://www.thecocktaildb.com/images/ingredients/Scotch.png"
+              alt="Scotch"
+            ></img>
+            <h3>Scotch</h3>
+          </div>
         </ContWrapper>
       </>
     );

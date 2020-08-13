@@ -14,6 +14,8 @@ import Welcome from "../Component/Welcome";
 import BrowseDrinks from "../Component/BrowseDrinks";
 import Letter from "../Component/Letter";
 import ImageDes from "../Component/ImageDes";
+import LatestInte from "../Component/Latestinte";
+import RandomInt from "../Component/Randomint";
 const ContWrapp = styled.div`
   background-color: #330033;
   * {
@@ -59,7 +61,9 @@ class Home extends Component {
               <>
                 <Result data={data} />
                 <Letter />
+                <LatestInte />
                 <ImageDes />
+                <RandomInt />
               </>
             )}
           </ContWrapp>
