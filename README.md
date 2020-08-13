@@ -34,7 +34,8 @@ Just intsall it and you are good to go.
 - Email: lakshmilucky6651@gmail.com
 
 👤 *Madhurendra Kumar*
--Github:https://github.com/Madhurendra1311
--Twitter:https://twitter.com/Madhurendra1311
--Linkedin:https://www.linkedin.com/in/madhurendra-kumar-54a21019b/
--Email:kmadhu1311@gmail.com
+- Github: https://github.com/Madhurendra1311
+- Twitter::https://twitter.com/Madhurendra1311
+- Linkedin: https://www.linkedin.com/in/madhurendra-kumar-54a21019b/
+- Email: kmadhu1311@gmail.com
+
