@@ -9,6 +9,7 @@ class AppContextProvider extends React.Component {
       status: false,
       data: "",
       letterdata: "",
+      intdata: "",
     };
   }
   toggleAuth = (res) => {
@@ -27,15 +28,26 @@ class AppContextProvider extends React.Component {
       status: data,
     });
   };
+  updateInte = (data) => {
+    this.setState({
+      intdata: data,
+    });
+  };
   updateLetter = (data) => {
     this.setState({
       letterdata: data,
     });
   };
   render() {
-    console.log(this.state.status, this.state.data, this.state.letterdata);
-    const { status, isAuth, data, letterdata } = this.state;
-    const { toggleAuth, updateData, updateStatus, updateLetter } = this;
+    console.log(this.state.intdata);
+    const { status, isAuth, data, letterdata, intdata } = this.state;
+    const {
+      toggleAuth,
+      updateData,
+      updateStatus,
+      updateLetter,
+      updateInte,
+    } = this;
     return (
       <AppContext.Provider
         value={{
@@ -47,6 +59,8 @@ class AppContextProvider extends React.Component {
           updateData,
           updateStatus,
           updateLetter,
+          intdata,
+          updateInte,
         }}
       >
         {this.props.children}

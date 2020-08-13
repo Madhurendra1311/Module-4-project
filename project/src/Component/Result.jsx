@@ -14,7 +14,7 @@ const Cont = styled.div`
 const Card = styled.div`
   display: flex;
   margin-left: 37%;
-  margin-top: -60px;
+  margin-top: -70px;
   img {
     width: 300px;
     border: 5px solid white;
