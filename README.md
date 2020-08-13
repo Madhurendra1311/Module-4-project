@@ -1,10 +1,10 @@
-#Cocktail DB
+## Cocktail DB
 >This will interesting to almost all the people of today's generation.
 >We developed a website where the user can find all cocktails available and their ingrediants 
 ##Poject ScreenShot
-<img src="C:\Users\anunraj\Desktop\Cocktail\Module-4-project\project\src\Images\Complete.png" width=900 />
+<img src="Module-4-project\project\src\Images\Complete.png" width=900 />
 
-##Features of the projetc
+## Features of the Project
 -can search for any cocktail in the search bar
 -to know the ingredients used just cilck on the images on the layout
 -And to make user comfortable we have add a feature to search with starting letter of cocktail  for that just go top to down and click on the letters then you will find the respective letter cocktails 
