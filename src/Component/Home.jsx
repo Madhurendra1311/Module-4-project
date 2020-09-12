@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import styles from "./item.module.css"
 import { Component } from "react";
 import NavBar from "../Component/NavBar";
 import PopularDrinks from "../Component/PopularDrinks";
@@ -40,7 +41,7 @@ class Home extends Component {
           <ContWrapp>
             <NavBar></NavBar>
             <Welcome />
-            <hr></hr>
+            <hr className={styles.hrTag}></hr>
             <SearchBar />
             <hr></hr>
             {!isAuth ? (
@@ -58,14 +59,14 @@ class Home extends Component {
                 <BrowseDrinks />
               </>
             ) : (
-              <>
-                <Result data={data} />
-                <Letter />
-                <LatestInte />
-                <ImageDes />
-                <RandomInt />
-              </>
-            )}
+                <>
+                  <Result data={data} />
+                  <Letter />
+                  <LatestInte />
+                  <ImageDes />
+                  <RandomInt />
+                </>
+              )}
           </ContWrapp>
         </div>
       </>

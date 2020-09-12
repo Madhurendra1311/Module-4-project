@@ -10,6 +10,8 @@ const Cont = styled.div`
     margin-left: 10px;
     margin-top: 10px;
   }
+  @media screen and (max-width: 800px) {
+
 `;
 const Card = styled.div`
   display: flex;
@@ -20,6 +22,10 @@ const Card = styled.div`
     border: 5px solid white;
     flex: 1px;
   }
+  @media screen and (max-width: 800px) {
+    img{
+        margin-top:200px
+    }
 `;
 class RandomInt extends Component {
   constructor(props) {

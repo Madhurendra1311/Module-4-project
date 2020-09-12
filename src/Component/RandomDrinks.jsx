@@ -1,19 +1,20 @@
 import React from "react";
 import axios from "axios";
+import styles from "./item.module.css"
 import styled from "styled-components";
 import { Component } from "react";
 import { AppContext } from "../Context/AppContextProvider";
 const ContWrapper = styled.div`
-  display: flex;
+ 
   width: 84%;
-  margin: 10px 8%;
+  margin: 10px 5%;
   img {
     width: 200px;
     margin: 10px;
     border: 4px solid white;
   }
   h3 {
-    flex: 1px;
+    
     margin-top: 0px;
   }
 `;
@@ -56,7 +57,7 @@ class RandomDrinks extends Component {
     return (
       <>
         <h4>Random Drinks</h4>
-        <ContWrapper>
+        <ContWrapper className={styles.main}>
           <div
             onClick={() => {
               this.handleRandom("Bounty Hunter");
@@ -112,8 +113,7 @@ class RandomDrinks extends Component {
             ></img>{" "}
             <h3>Pineapple Paloma</h3>
           </div>
-        </ContWrapper>
-        <ContWrapper>
+
           <div
             onClick={() => {
               this.handleRandom("White Wine Sangria");

@@ -1,17 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+import styles from "./item.module.css"
 import { Component } from "react";
 import { AppContext } from "../Context/AppContextProvider";
 const ContWrapper = styled.div`
-  display: flex;
   width: 84%;
-  margin: 10px 10%;
+  margin: 10px 5%;
   img {
     width: 200px;
     margin: 10px;
   }
   h3 {
-    flex: 1px;
+  
     margin-top: 0px;
   }
 `;
@@ -23,7 +23,7 @@ class RandomIngredients extends Component {
     return (
       <>
         <h4>Random Ingredients</h4>
-        <ContWrapper>
+        <ContWrapper className={styles.main}>
           <div>
             {" "}
             <img

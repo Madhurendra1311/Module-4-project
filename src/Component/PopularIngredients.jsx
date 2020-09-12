@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import styles from "./item.module.css"
 import { Component } from "react";
 const ContWrapper = styled.div`
-  display: flex;
+
   width: 84%;
-  margin: 10px 10%;
+  margin: 10px 5%;
   img {
     width: 200px;
     margin: 10px;
@@ -16,6 +17,7 @@ const ContWrapper = styled.div`
     padding: 10px;
     text-content: center;
   }
+ 
 `;
 class PopularIngredients extends Component {
   constructor(props) {
@@ -25,7 +27,7 @@ class PopularIngredients extends Component {
     return (
       <>
         <h4>Popular Ingredients</h4>
-        <ContWrapper>
+        <ContWrapper className={styles.main}>
           <div>
             <img
               src="https://www.thecocktaildb.com/images/ingredients/Vodka.png"

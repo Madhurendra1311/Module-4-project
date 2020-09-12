@@ -10,6 +10,7 @@ const Cont = styled.div`
     width: 100px;
     margin-left: 10px;
   }
+ 
 `;
 const Card = styled.div`
   float: left;
@@ -19,6 +20,10 @@ const Card = styled.div`
     border: 5px solid white;
     flex: 1px;
   }
+  @media screen and (max-width: 800px) {
+    img{
+        margin-top:200px
+    }
 `;
 class LatestInte extends Component {
   constructor(props) {
