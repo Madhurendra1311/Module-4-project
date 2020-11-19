@@ -21,9 +21,9 @@ const Card = styled.div`
   }
 `;
 class Letter extends Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
   render() {
     console.log(this.context.letterdata);
     const { letterdata } = this.context;
@@ -35,7 +35,7 @@ class Letter extends Component {
               <h4>
                 {letterdata.map((item) => (
                   <div>
-                    <img src={item.strDrinkThumb}></img>
+                    <img src={item.strDrinkThumb} alt=""></img>
                     <h4>{item.strDrink}</h4>
                     <h4>Category:{item.strCategory}</h4>
                   </div>

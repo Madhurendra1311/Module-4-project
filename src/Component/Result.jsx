@@ -39,7 +39,7 @@ class Result extends Component {
               <h4>
                 {this.props.data.map((item) => (
                   <div>
-                    <img src={item.strDrinkThumb}></img>
+                    <img src={item.strDrinkThumb} alt=""></img>
                     <h4>{item.strDrink}</h4>
                     <h4>Category:{item.strCategory}</h4>
                   </div>

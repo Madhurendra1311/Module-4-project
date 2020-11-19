@@ -26,11 +26,11 @@ const NavBarWrapper = styled.div`
   }
 `;
 class NavBar extends Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
   handleToggle = () => {
-    const { isAuth, toggleAuth } = this.context;
+    const { toggleAuth } = this.context;
     toggleAuth(false);
   };
   render() {

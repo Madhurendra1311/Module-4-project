@@ -45,11 +45,11 @@ class SearchBar extends Component {
 
   setToken = (res) => {
     const {
-      isAuth,
+      // isAuth,
       toggleAuth,
-      data,
+      // data,
       updateData,
-      updateStatus,
+      // updateStatus,
       updateInte,
       updatepopInte,
       updateranInte,

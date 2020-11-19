@@ -1,6 +1,5 @@
 import React from "react";
 import axios from "axios";
-
 import styles from "../Component/item.module.css"
 import styled from "styled-components";
 import { Component } from "react";
@@ -34,10 +33,8 @@ class PopularDrinks extends Component {
 
   setToken = (res) => {
     const {
-      status,
       toggleAuth,
       updateData,
-
       updateInte,
       updatepopInte,
       updateranInte,

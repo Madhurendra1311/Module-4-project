@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import styled from "styled-components";
+// import styled from "styled-components";
 import { Component } from "react";
 import { AppContext } from "../Context/AppContextProvider";
 const searchKey = [
@@ -51,7 +51,7 @@ class BrowseDrinks extends Component {
   }
 
   handleSearch = (data) => {
-    const { status, updateStatus, updateLetter } = this.context;
+    // const { status, updateStatus, updateLetter } = this.context;
     let searchEndpints =
       "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=" +
       data.toLowerCase();
@@ -59,7 +59,7 @@ class BrowseDrinks extends Component {
   };
   setToken = (res) => {
     const {
-      status,
+      // status,
       toggleAuth,
       updateData,
 
@@ -81,7 +81,7 @@ class BrowseDrinks extends Component {
   };
   render() {
     console.log(this.state.userDetails, this.context.status);
-    const { status } = this.context;
+    // const { status } = this.context;
     return (
       <>
         <div style={style} display="flex">

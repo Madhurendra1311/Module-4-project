@@ -1,10 +1,10 @@
 import React from "react";
-import styled from "styled-components";
+// import styled from "styled-components";
 import { Component } from "react";
 class Welcome extends Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
   render() {
     return (
       <>
@@ -12,7 +12,7 @@ class Welcome extends Component {
         <div style={{ marginTop: "30px", marginLeft: "100px" }}>
           <div style={{ width: "100%", height: "200px", display: "flex" }}>
             <div>
-              <img src="https://www.thecocktaildb.com/images/cocktail_left.png" style={{ width: "150px", height: "150px" }} />
+              <img src="https://www.thecocktaildb.com/images/cocktail_left.png" style={{ width: "150px", height: "150px" }} alt="" />
             </div>
             <div >
               <div>
@@ -24,11 +24,11 @@ class Welcome extends Component {
                         If you like the site, please consider supporting us on Patreon by clicking the link below...</p>
               </div>
               <div >
-                <img src="https://www.thecocktaildb.com/images/patreon_logo.png" style={{ width: "120px", height: "40px" }} />
+                <img src="https://www.thecocktaildb.com/images/patreon_logo.png" style={{ width: "120px", height: "40px" }} alt="" />
               </div>
             </div>
             <div >
-              <img src="https://www.thecocktaildb.com/images/cocktail_left.png" style={{ width: "150px", height: "150px" }} />
+              <img src="https://www.thecocktaildb.com/images/cocktail_left.png" style={{ width: "150px", height: "150px" }} alt="" />
             </div>
           </div>
         </div>

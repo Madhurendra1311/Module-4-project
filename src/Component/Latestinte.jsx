@@ -26,9 +26,9 @@ const Card = styled.div`
     }
 `;
 class LatestInte extends Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
   render() {
     console.log(this.context.popInte);
     const { popInte } = this.context;
@@ -41,7 +41,7 @@ class LatestInte extends Component {
               <h4>
                 {popInte.map((item) => (
                   <div>
-                    <img src={item.strDrinkThumb}></img>
+                    <img src={item.strDrinkThumb} alt=""></img>
                     <h4>{item.strDrink}</h4>
                     <h4>Category:{item.strCategory}</h4>
                     <h4>{item.strIngredient1}</h4>

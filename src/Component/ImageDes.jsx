@@ -26,9 +26,9 @@ const Card = styled.div`
     }
 `;
 class ImageDes extends Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
   render() {
     console.log(this.context.intdata);
     const { intdata } = this.context;
@@ -41,7 +41,7 @@ class ImageDes extends Component {
                 <h4>
                   {intdata.map((item) => (
                     <div>
-                      <img src={item.strDrinkThumb}></img>
+                      <img src={item.strDrinkThumb} alt=""></img>
                       <h4>{item.strDrink}</h4>
                       <h4>Category:{item.strCategory}</h4>
                       <h4>{item.strIngredient1}</h4>

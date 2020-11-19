@@ -34,10 +34,8 @@ class LatestDrinks extends Component {
 
   setToken = (res) => {
     const {
-      status,
       toggleAuth,
       updateData,
-
       updateInte,
       updatepopInte,
       updateranInte,

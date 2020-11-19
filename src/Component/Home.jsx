@@ -29,12 +29,12 @@ const ContWrapp = styled.div`
 `;
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
   render() {
     console.log(this.context);
-    const { isAuth, data, status } = this.context;
+    const { isAuth, data } = this.context;
     return (
       <>
         <div>
